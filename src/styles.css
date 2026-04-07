@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black-kite: #351E1C;
+  --color-garnet: #733635;
+  --color-garnet-light: #8B4443;
+  --color-garnet-dark: #5C2A29;
+  --color-kite-warm: #4A2D2A;
+  --color-cream: #F5F0EB;
+  --color-warm-gray: #E8E0D8;
+}

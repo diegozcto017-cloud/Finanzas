@@ -1,0 +1,193 @@
+# Instrucciones para Cowork — Proyecto Finanzas Personales
+
+## Contexto
+Este es un proyecto Angular 19+ (Standalone, Zoneless) con Tailwind CSS v4 y Supabase como backend.
+Todos los archivos fuente están en la carpeta "Finanzas Personales" del escritorio.
+El proyecto Angular destino puede ser nuevo o existente.
+
+## Tarea Principal
+Lee todos los archivos .ts y .md de la carpeta "Finanzas Personales" y organízalos
+en la estructura correcta de un proyecto Angular.
+
+---
+
+## ESTRUCTURA DE CARPETAS A CREAR
+
+```
+finanzas-personales/
+├── src/
+│   ├── environments/
+│   │   └── environment.ts                              ← "environment.ts"
+│   ├── index.html                                       ← Agregar Material Icons (ver abajo)
+│   ├── app/
+│   │   ├── app.component.ts                             ← "app.component.ts" (Layout principal)
+│   │   ├── app.routes.ts                                ← "app.routes.ts"
+│   │   ├── core/
+│   │   │   ├── services/
+│   │   │   │   ├── supabase.service.ts                  ← "supabase.service.ts"
+│   │   │   │   └── migration.service.ts                 ← "migration.service.ts"
+│   │   │   └── guards/
+│   │   │       └── auth.guard.ts                        ← "auth.guard.ts"
+│   │   ├── shared/
+│   │   │   └── components/
+│   │   │       ├── suggestions-banner/
+│   │   │       │   └── suggestions-banner.component.ts  ← "suggestions-banner.component.ts"
+│   │   │       └── onboarding/
+│   │   │           └── onboarding.component.ts          ← "onboarding.component.ts"
+│   │   └── pages/
+│   │       ├── login/
+│   │       │   └── login.component.ts                   ← "login.component.ts"
+│   │       ├── register/
+│   │       │   └── register.component.ts                ← "register.component.ts"
+│   │       ├── forgot-password/
+│   │       │   └── forgot-password.component.ts         ← "forgot-password.component.ts"
+│   │       ├── reset-password/
+│   │       │   └── reset-password.component.ts          ← "reset-password.component.ts"
+│   │       ├── dashboard/
+│   │       │   └── dashboard.component.ts               ← "dashboard.component.ts"
+│   │       ├── emails/
+│   │       │   └── emails.component.ts                  ← "emails.component.ts"
+│   │       ├── envelopes/
+│   │       │   └── envelopes.component.ts               ← "envelopes.component.ts"
+│   │       ├── subscriptions/
+│   │       │   └── subscriptions.component.ts           ← "subscriptions.component.ts"
+│   │       ├── purchases/
+│   │       │   └── purchases.component.ts               ← "purchases.component.ts"
+│   │       ├── projections/
+│   │       │   └── projections.component.ts             ← "projections.component.ts"
+│   │       ├── calendar/
+│   │       │   └── calendar.component.ts                ← "calendar.component.ts"
+│   │       ├── expense-averages/
+│   │       │   └── expense-averages.component.ts        ← "expense-averages.component.ts"
+│   │       └── profile/
+│   │           └── profile.component.ts                 ← "profile.component.ts"
+├── tailwind.config.ts                                   ← "tailwind.config.ts"
+└── package.json                                          ← Verificar dependencias
+```
+
+---
+
+## MAPEO DE ARCHIVOS
+
+Buscar cada archivo en la carpeta "Finanzas Personales" por su nombre y copiarlo
+a la ruta destino indicada:
+
+| Archivo fuente (nombre del archivo)        | Ruta destino                                                    |
+|-------------------------------------------|-----------------------------------------------------------------|
+| environment.ts                            | src/environments/environment.ts                                 |
+| supabase.service.ts                       | src/app/core/services/supabase.service.ts                       |
+| migration.service.ts                      | src/app/core/services/migration.service.ts                      |
+| auth.guard.ts                             | src/app/core/guards/auth.guard.ts                               |
+| app.routes.ts                             | src/app/app.routes.ts                                           |
+| app.component.ts                          | src/app/app.component.ts                                        |
+| tailwind.config.ts                        | tailwind.config.ts (raíz del proyecto)                          |
+| login.component.ts                        | src/app/pages/login/login.component.ts                          |
+| register.component.ts                     | src/app/pages/register/register.component.ts                    |
+| forgot-password.component.ts              | src/app/pages/forgot-password/forgot-password.component.ts      |
+| reset-password.component.ts               | src/app/pages/reset-password/reset-password.component.ts        |
+| dashboard.component.ts                    | src/app/pages/dashboard/dashboard.component.ts                  |
+| emails.component.ts                       | src/app/pages/emails/emails.component.ts                        |
+| envelopes.component.ts                    | src/app/pages/envelopes/envelopes.component.ts                  |
+| subscriptions.component.ts                | src/app/pages/subscriptions/subscriptions.component.ts          |
+| purchases.component.ts                    | src/app/pages/purchases/purchases.component.ts                  |
+| projections.component.ts                  | src/app/pages/projections/projections.component.ts              |
+| calendar.component.ts                     | src/app/pages/calendar/calendar.component.ts                    |
+| expense-averages.component.ts             | src/app/pages/expense-averages/expense-averages.component.ts    |
+| profile.component.ts                      | src/app/pages/profile/profile.component.ts                      |
+| suggestions-banner.component.ts           | src/app/shared/components/suggestions-banner/suggestions-banner.component.ts |
+| onboarding.component.ts                   | src/app/shared/components/onboarding/onboarding.component.ts    |
+
+---
+
+## MODIFICACIONES A ARCHIVOS EXISTENTES
+
+### 1. index.html — Agregar Material Icons
+En el archivo src/index.html, dentro del <head>, agregar esta línea si no existe:
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+
+### 2. package.json — Verificar dependencias
+El archivo package.json debe incluir estas dependencias:
+```json
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.x"
+  }
+}
+```
+
+### 3. Si es proyecto NUEVO (ng new), el app.config.ts debe tener:
+```typescript
+// src/app/app.config.ts
+import { ApplicationConfig, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes),
+  ],
+};
+```
+
+### 4. Tailwind v4 — Si usa CSS config en vez de JS
+Si el proyecto usa Tailwind v4 con @theme en CSS (en vez de tailwind.config.ts),
+agregar esto al archivo CSS principal (src/styles.css o src/styles.scss):
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-black-kite: #351E1C;
+  --color-garnet: #733635;
+  --color-garnet-light: #8B4443;
+  --color-garnet-dark: #5C2A29;
+  --color-kite-warm: #4A2D2A;
+  --color-cream: #F5F0EB;
+  --color-warm-gray: #E8E0D8;
+}
+```
+
+---
+
+## COMANDOS QUE EL USUARIO DEBE EJECUTAR EN TERMINAL
+
+Después de organizar los archivos, el usuario (Diego) debe ejecutar:
+
+```bash
+# 1. Si es proyecto nuevo
+ng new finanzas-personales --standalone --style=scss --ssr=false
+cd finanzas-personales
+
+# 2. Instalar dependencias
+npm install @supabase/supabase-js
+npm install -D tailwindcss @tailwindcss/postcss postcss autoprefixer
+
+# 3. Verificar que compila
+ng build
+
+# 4. Deploy a Vercel
+npx vercel --prod
+```
+
+---
+
+## INFORMACIÓN DEL BACKEND (para referencia, ya está configurado)
+
+- **Supabase URL**: https://bqkycxykyzrggwsafamh.supabase.co
+- **16 tablas** con Row Level Security
+- **9 Edge Functions** activas
+- **Paleta de colores**: Black Kite (#351E1C) + Garnet (#733635)
+- **Auth**: Email + password (NO Google/Microsoft para login, solo para conectar correos)
+
+---
+
+## NOTAS IMPORTANTES
+
+1. Todos los componentes son Standalone (no necesitan módulos NgModule)
+2. Todos usan Angular Signals (signal, computed)
+3. El template de cada componente está inline (no archivos .html separados)
+4. Los estilos usan Tailwind utility classes (no archivos .css/.scss separados)
+5. Material Icons se usan via <span class="material-icons">nombre</span>
+6. La app es mobile-first con bottom nav en móvil y sidebar en desktop

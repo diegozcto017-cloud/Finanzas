@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ng new:*)",
+      "Bash(__NEW_LINE_b9a869540c368b80__:*)",
+      "Bash(npm install:*)",
+      "Bash(ng build:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
