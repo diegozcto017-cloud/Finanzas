@@ -1,0 +1,177 @@
+﻿
+> finanzas-personales@0.0.0 start
+> ng serve --port 4206
+
+[33mÔØ»[39m Building...
+node.exe : C:\Users\diego\
+Videos\Finanzas Personales
+\node_modules\tailwindcss\
+dist\lib.js:38
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  :\Users\diego\...\dis   
+ t\lib.js:38:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+${N}`)}}))u.get(b)?.(x);fo
+r(let b of 
+m)b(x);if(d){let 
+b=[];for(let[E,N]of x.them
+e.entries()){if(N.options&
+2)continue;let L=l(Ae(E),N
+.value);L.src=N.src,b.push
+(L)}let D=x.theme.getKeyfr
+ames();for(let E of D)e.pu
+sh(de({theme:!0},[W([E])])
+);d.nodes=[de({theme:!0},b
+)]}if(a|=ot(e,x),a|=Fe(e,x
+),a|=Te(e,x),p){let b=p;b.
+kind="context",b.context={
+}}return I(e,b=>{if(b.kind
+==="at-rule")return b.name
+==="@utility"?R.Replace([]
+):R.Skip}),{designSystem:x
+,ast:e,sources:h,root:V,ut
+ilitiesNode:p,features:a,i
+nlineCandidates:w}}async 
+function gn(e,r={}){let{de
+signSystem:i,ast:t,sources
+:n,root:a,utilitiesNode:o,
+features:f,inlineCandidate
+s:u}=await 
+mn(e,r);t.unshift(dt(`! 
+tailwindcss v${hr} | MIT 
+License | 
+https://tailwindcss.com 
+`));function c(h){i.invali
+dCandidates.add(h)}let 
+m=new Set,d=null,p=0,k=!1;
+for(let h of u)i.invalidCa
+ndidates.has(h)||(m.add(h)
+,k=!0);return{sources:n,ro
+ot:a,features:f,build(h){i
+f(f===0)return 
+e;if(!o)return d??=Re(t,i,
+r.polyfills),d;let 
+w=k,A=!1;k=!1;let 
+V=m.size;for(let b of h)if
+(!i.invalidCandidates.has(
+b))if(b[0]==="-"&&b[1]==="
+-"){let D=i.theme.markUsed
+Variable(b);w||=D,A||=D}el
+se m.add(b),w||=m.size!==V
+;if(!w)return d??=Re(t,i,r
+.polyfills),d;let x=Ee(m,i
+,{onInvalidCandidate:c}).a
+stNodes;return r.from&&I(x
+,b=>{b.src??=o.src}),!A&&p
+===x.length?(d??=Re(t,i,r.
+polyfills),d):(p=x.length,
+o.nodes=x,d=Re(t,i,r.polyf
+ills),d)}}}async function 
+ia(e,r={}){let i=Ve(e,{fro
+m:r.from}),t=await gn(i,r)
+,n=i,a=e;return{...t,build
+(o){let 
+f=t.build(o);return f===n|
+|(a=ne(f,!!r.from),n=f),a}
+,buildSourceMap(){return 
+fn({ast:n})}}}async 
+function 
+na(e,r={}){return(await mn
+(Ve(e,{from:r.from}),r)).d
+esignSystem}function 
+at(){throw new Error("It 
+looks like you're trying 
+to use `tailwindcss` 
+directly as a PostCSS 
+plugin. The PostCSS 
+plugin has moved to a 
+separate package, so to 
+continue using Tailwind 
+CSS with PostCSS you'll 
+need to install 
+`@tailwindcss/postcss` 
+and update your PostCSS 
+configuration.")}for(let 
+e in Ut)e!=="default"&&(at
+[e]=Ut[e]);module.exports=
+at;
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+                          
+      
+
+Error: It looks like 
+you're trying to use 
+`tailwindcss` directly as 
+a PostCSS plugin. The 
+PostCSS plugin has moved 
+to a separate package, so 
+to continue using 
+Tailwind CSS with PostCSS 
+you'll need to install 
+`@tailwindcss/postcss` 
+and update your PostCSS 
+configuration.
+    at Object.at [as 
+default] (C:\Users\diego\V
+ideos\Finanzas Personales\
+node_modules\tailwindcss\d
+ist\lib.js:38:1643)
+    at StylesheetPluginFac
+tory.initPostcss (C:\Users
+\diego\Videos\Finanzas Per
+sonales\node_modules\@angu
+lar\build\src\tools\esbuil
+d\stylesheets\stylesheet-p
+lugin-factory.js:173:66)
+
+Node.js v24.14.0

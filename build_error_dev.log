@@ -1,0 +1,219 @@
+﻿
+> finanzas-personales@0.0.0 start
+> ng serve --port 4202
+
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m
+[32mchunk-6IAFZTNY.js[39m  [2m | [22m[2m-[22m                         [2m | [22m [36m36.85 kB[39m[2m | [22m
+[32mchunk-WYIJ6KC7.js[39m  [2m | [22m[2m-[22m                         [2m | [22m [36m31.48 kB[39m[2m | [22m
+[32mstyles.css[39m         [2m | [22m[2mstyles[22m                    [2m | [22m [36m22.83 kB[39m[2m | [22m
+[32mmain.js[39m            [2m | [22m[2mmain[22m                      [2m | [22m [36m19.08 kB[39m[2m | [22m
+
+[1m [22m                  [2m | [22m[1mInitial total[22m             [2m | [22m[1m110.24 kB[22m
+
+[1mLazy chunk files[22m   [2m | [22m[1mNames[22m                     [2m | [22m [1mRaw size[22m
+[32mchunk-72YLLTMR.js[39m  [2m | [22m[2memails-component[22m          [2m | [22m [36m68.49 kB[39m[2m | [22m
+[32mchunk-MUQRMIUF.js[39m  [2m | [22m[2mdashboard-component[22m       [2m | [22m [36m65.93 kB[39m[2m | [22m
+[32mchunk-SLBFC6YF.js[39m  [2m | [22m[2mprojections-component[22m     [2m | [22m [36m56.45 kB[39m[2m | [22m
+[32mchunk-26ZT6NOQ.js[39m  [2m | [22m[2menvelopes-component[22m       [2m | [22m [36m50.35 kB[39m[2m | [22m
+[32mchunk-WIONZ2C5.js[39m  [2m | [22m[2mcalendar-component[22m        [2m | [22m [36m47.05 kB[39m[2m | [22m
+[32mchunk-CZRVXJCB.js[39m  [2m | [22m[2msubscriptions-component[22m   [2m | [22m [36m38.45 kB[39m[2m | [22m
+[32mchunk-H7AAUVNL.js[39m  [2m | [22m[2mpurchases-component[22m       [2m | [22m [36m30.39 kB[39m[2m | [22m
+[32mchunk-Y3LFXGC6.js[39m  [2m | [22m[2mprofile-component[22m         [2m | [22m [36m29.25 kB[39m[2m | [22m
+[32mchunk-2YO65EJO.js[39m  [2m | [22m[2mregister-component[22m        [2m | [22m [36m24.11 kB[39m[2m | [22m
+[32mchunk-7G2SGGO5.js[39m  [2m | [22m[2mexpense-averages-component[22m[2m | [22m [36m22.17 kB[39m[2m | [22m
+[32mchunk-ZTWKRT7K.js[39m  [2m | [22m[2mreset-password-component[22m  [2m | [22m [36m17.60 kB[39m[2m | [22m
+[32mchunk-5EKXULPX.js[39m  [2m | [22m[2mlogin-component[22m           [2m | [22m [36m16.34 kB[39m[2m | [22m
+[32mchunk-AUZWOWXW.js[39m  [2m | [22m[2mforgot-password-component[22m [2m | [22m [36m14.31 kB[39m[2m | [22m
+
+Application bundle generation complete. [3.537 seconds] - 2026-04-07T17:15:04.710Z
+
+node.exe : 
+[1m[33m[33mÔû▓ [43;33m
+[[43;30mWARNING[43;33m]
+[0m [1mNG8113: 
+RouterLink is not used 
+within the template of Res
+etPasswordComponent[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (  
+  [1m[33m[33mÔ...r-co   
+ mpiler][0m:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+
+    src/app/pages/reset-pa
+ssword/reset-password.comp
+onent.ts:11:39:
+[37m      11 Ôöé   
+imports: [CommonModule, 
+FormsModule, 
+[32mRouterLink[37m],
+         ÔòÁ              
+                          
+[32m~~~~~~~~~~[0m
+
+[39m[22m
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  [32mÔ×£[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4202[22m/[39m
+[2m[32m  Ô×£[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[33mÔØ»[39m Changes detected. Rebuilding...
+[32mÔ£ö[39m Changes detected. Rebuilding...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m [2m | [22m[1mRaw size[22m
+[32mstyles.css[39m         [2m | [22m[2mstyles[22m[2m | [22m[36m22.86 kB[39m[2m | [22m
+
+Application bundle generation complete. [0.039 seconds] - 2026-04-07T17:16:38.418Z
+
+[1m[33m[33mÔû▓ [43;33m
+[[43;30mWARNING[43;33m]
+[0m [1mNG8113: 
+RouterLink is not used 
+within the template of Res
+etPasswordComponent[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/reset-pa
+ssword/reset-password.comp
+onent.ts:11:39:
+[37m      11 Ôöé   
+imports: [CommonModule, 
+FormsModule, 
+[32mRouterLink[37m],
+         ÔòÁ              
+                          
+[32m~~~~~~~~~~[0m
+
+[39m[22m
+Stylesheet update sent to client(s).
+[33mÔØ»[39m Changes detected. Rebuilding...
+[32mÔ£ö[39m Changes detected. Rebuilding...
+Application bundle generation failed. [0.014 seconds] - 2026-04-07T17:52:13.196Z
+
+[1m[33m[33mÔû▓ [43;33m
+[[43;30mWARNING[43;33m]
+[0m [1mNG8113: 
+RouterLink is not used 
+within the template of Res
+etPasswordComponent[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/reset-pa
+ssword/reset-password.comp
+onent.ts:11:39:
+[37m      11 Ôöé   
+imports: [CommonModule, 
+FormsModule, 
+[32mRouterLink[37m],
+         ÔòÁ              
+                          
+[32m~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[
+[41;97mERROR[41;31m][0m 
+[1mCould not resolve 
+"src/styles.css"[0m
+
+    angular:styles/global:
+styles:1:8:
+[37m      1 Ôöé @import 
+[32m'src/styles.css'[37m;
+        ÔòÁ         
+[32m~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path 
+"src/styles.css" as 
+external to exclude it 
+from the bundle, which 
+will remove this error 
+and leave the unresolved 
+path in the bundle.
+
+[39m[22m
+[33mÔØ»[39m Changes detected. Rebuilding...
+[32mÔ£ö[39m Changes detected. Rebuilding...
+Application bundle generation failed. [11.303 seconds] - 2026-04-07T19:25:46.935Z
+
+[1m[33m[33mÔû▓ [43;33m
+[[43;30mWARNING[43;33m]
+[0m [1mNG8113: 
+RouterLink is not used 
+within the template of Res
+etPasswordComponent[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/pages/reset-pa
+ssword/reset-password.comp
+onent.ts:11:39:
+[37m      11 Ôöé   
+imports: [CommonModule, 
+FormsModule, 
+[32mRouterLink[37m],
+         ÔòÁ              
+                          
+[32m~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30m
+WARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/app/app.component.
+scss:1:8:
+[37m      1 Ôöé @import 
+[32m[37m"tailwindcss";
+        ÔòÁ         
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 
+3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass
+-lang.com/d/import[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[
+[41;97mERROR[41;31m][0m 
+[1mCould not resolve 
+"src/styles.css"[0m
+
+    angular:styles/global:
+styles:1:8:
+[37m      1 Ôöé @import 
+[32m'src/styles.css'[37m;
+        ÔòÁ         
+[32m~~~~~~~~~~~~~~~~[0m
+
+  You can mark the path 
+"src/styles.css" as 
+external to exclude it 
+from the bundle, which 
+will remove this error 
+and leave the unresolved 
+path in the bundle.
+
+[39m[22m

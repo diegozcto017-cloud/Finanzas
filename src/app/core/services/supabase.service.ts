@@ -7,6 +7,7 @@ export interface Profile {
   id: string;
   display_name: string | null;
   currency_default: 'CRC' | 'USD';
+  onboarding_completed: boolean;
   theme: string;
   created_at: string;
   updated_at: string;
@@ -273,6 +274,10 @@ export class SupabaseService {
     });
     if (error) throw error;
     return data;
+  }
+
+  async loadData() {
+    await this.loadProfile();
   }
 
   // ═══════════════════════════════════════

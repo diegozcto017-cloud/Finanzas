@@ -1,8 +1,9 @@
 // src/app/app.component.ts
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { SupabaseService } from './core/services/supabase.service';
+import { OnboardingComponent } from './shared/components/onboarding/onboarding.component';
 
 interface NavItem {
   label: string;
@@ -13,7 +14,7 @@ interface NavItem {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, OnboardingComponent],
   template: `
     @if (sb.loading()) {
       <div class="min-h-screen bg-cream flex items-center justify-center">
@@ -27,6 +28,9 @@ interface NavItem {
     } @else if (!sb.isAuthenticated()) {
       <router-outlet />
     } @else {
+      @if (!sb.profile()?.onboarding_completed) {
+        <app-onboarding (completed)="sb.loadData()" />
+      }
       <div class="min-h-screen bg-cream flex">
         <!-- Sidebar desktop -->
         <aside class="hidden md:flex flex-col w-64 bg-black-kite border-r border-kite-warm fixed h-full">

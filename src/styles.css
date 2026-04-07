@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "./app/**/*.{ts,html}";
 
 @theme {
   --color-black-kite: #351E1C;
