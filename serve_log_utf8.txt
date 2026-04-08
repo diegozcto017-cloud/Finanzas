@@ -1,0 +1,8 @@
+﻿node.exe : [1m[31mAn unhandled exception occurred: Port 4227 is already in use. Use '--port' to specify a different port.
+En C:\Users\diego\AppData\Roaming\npm\ng.ps1: 24 Carácter: 5
++     & "node$exe"  "$basedir/node_modules/@angular/cli/bin/ng.js" $arg ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([1m[31mAn unh...different port.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+See "C:\Users\diego\AppData\Local\Temp\ng-UVtOAZ\angular-errors.log" for further details.[39m[22m

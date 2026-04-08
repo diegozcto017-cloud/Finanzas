@@ -107,6 +107,7 @@ interface NavItem {
   styles: [`
     .pb-safe { padding-bottom: env(safe-area-inset-bottom, 8px); }
   `],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   sb = inject(SupabaseService);
