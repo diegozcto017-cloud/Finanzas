@@ -5,7 +5,15 @@
       "Bash(__NEW_LINE_b9a869540c368b80__:*)",
       "Bash(npm install:*)",
       "Bash(ng build:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(npm run:*)",
+      "Bash(dir:*)",
+      "Bash(node_modules/tailwindcss/package.json:*)",
+      "Bash(npx vercel:*)",
+      "mcp__claude_ai_Vercel__list_projects",
+      "Bash(\"/c/Users/diego/Videos/Finanzas Personales/src/index.html\":*)",
+      "Bash(wc:*)",
+      "Bash(\"/c/Users/diego/Videos/Finanzas Personales/src/styles.css\":*)"
     ]
   }
 }

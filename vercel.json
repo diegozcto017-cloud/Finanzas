@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/finanzas-personales/browser",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

@@ -2,13 +2,13 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { SupabaseService } from '../../core/services/supabase.service';
 
 @Component({
   selector: 'app-reset-password',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   template: `
     <div class="min-h-screen bg-mist-gray flex items-center justify-center px-4">
       <div class="w-full max-w-md">
