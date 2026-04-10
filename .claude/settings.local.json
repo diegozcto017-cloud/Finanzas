@@ -13,7 +13,8 @@
       "mcp__claude_ai_Vercel__list_projects",
       "Bash(\"/c/Users/diego/Videos/Finanzas Personales/src/index.html\":*)",
       "Bash(wc:*)",
-      "Bash(\"/c/Users/diego/Videos/Finanzas Personales/src/styles.css\":*)"
+      "Bash(\"/c/Users/diego/Videos/Finanzas Personales/src/styles.css\":*)",
+      "Bash(rm:*)"
     ]
   }
 }
