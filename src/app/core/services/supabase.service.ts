@@ -284,8 +284,9 @@ export class SupabaseService {
    * Obtiene los headers de autenticación con JWT token
    */
   private async getAuthHeaders() {
-    const session = this.session();
-    if (!session?.access_token) {
+    // Obtener sesión directamente de auth, no del signal
+    const { data: { session }, error } = await this.supabase.auth.getSession();
+    if (error || !session?.access_token) {
       throw new Error('No authentication token available');
     }
     return {
