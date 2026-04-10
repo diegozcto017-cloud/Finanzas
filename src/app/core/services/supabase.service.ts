@@ -280,6 +280,19 @@ export class SupabaseService {
     await this.loadProfile();
   }
 
+  /**
+   * Obtiene los headers de autenticación con JWT token
+   */
+  private async getAuthHeaders() {
+    const session = this.session();
+    if (!session?.access_token) {
+      throw new Error('No authentication token available');
+    }
+    return {
+      'Authorization': `Bearer ${session.access_token}`
+    };
+  }
+
   // ═══════════════════════════════════════
   // PROFILE
   // ═══════════════════════════════════════
@@ -672,9 +685,11 @@ export class SupabaseService {
    */
   async connectEmailAccount(provider: 'gmail' | 'outlook'): Promise<void> {
     const redirectUri = `${window.location.origin}/correos`;
+    const headers = await this.getAuthHeaders();
 
     const { data, error } = await this.supabase.functions.invoke('connect-email-init', {
       body: { provider, redirect_uri: redirectUri },
+      headers,
     });
 
     if (error) throw error;
@@ -718,8 +733,10 @@ export class SupabaseService {
    * Desconecta una cuenta de correo
    */
   async disconnectEmailAccount(accountId: string) {
+    const headers = await this.getAuthHeaders();
     const { data, error } = await this.supabase.functions.invoke('disconnect-email', {
       body: { account_id: accountId },
+      headers,
     });
     if (error) throw error;
     return data;
@@ -730,13 +747,15 @@ export class SupabaseService {
   // ═══════════════════════════════════════
 
   async syncGmail() {
-    const { data, error } = await this.supabase.functions.invoke('sync-gmail');
+    const headers = await this.getAuthHeaders();
+    const { data, error } = await this.supabase.functions.invoke('sync-gmail', { headers });
     if (error) throw error;
     return data;
   }
 
   async syncOutlook() {
-    const { data, error } = await this.supabase.functions.invoke('sync-outlook');
+    const headers = await this.getAuthHeaders();
+    const { data, error } = await this.supabase.functions.invoke('sync-outlook', { headers });
     if (error) throw error;
     return data;
   }
@@ -945,7 +964,8 @@ export class SupabaseService {
   // ═══════════════════════════════════════
 
   async calculateAverages() {
-    const { data, error } = await this.supabase.functions.invoke('calculate-averages');
+    const headers = await this.getAuthHeaders();
+    const { data, error } = await this.supabase.functions.invoke('calculate-averages', { headers });
     if (error) throw error;
     return data;
   }
@@ -972,8 +992,10 @@ export class SupabaseService {
   // ═══════════════════════════════════════
 
   async generatePaycheckList(paymentCalendarId: string) {
+    const headers = await this.getAuthHeaders();
     const { data, error } = await this.supabase.functions.invoke('generate-paycheck-list', {
       body: { payment_calendar_id: paymentCalendarId },
+      headers,
     });
     if (error) throw error;
     return data;
